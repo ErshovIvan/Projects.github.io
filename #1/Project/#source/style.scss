@@ -1,0 +1,215 @@
+//Импорт необходимых файлов
+@import 'nullstyle';
+@import 'fontstyle';
+@mixin widhei($wid,$hei) {
+    max-width: $wid;
+    min-height: $hei;
+}
+body{
+    @include widhei(1440px,1700px);
+    background: #e8e8e8 url(../IMG/ellipse.png) 110px 63px no-repeat;
+}
+.content {
+    @include widhei(850px,1400px);
+    font-family: "Times New Roman";
+    padding: 110px 0 0 0;
+    margin: 0 auto;
+    
+}
+.content_top {
+    text-align: center;
+    margin: 0 0 64px 0;
+    .title{
+        h1{
+            font-family: Arial;
+            font-size: 14px;
+            line-height: 40px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #273d46;
+            margin:0 0 1px 0;
+            text-align: center;
+        }
+    }
+    .subtitle{
+        p{
+            padding: 0 0 0 3px;
+            font-size: 36px;
+            line-height: 50px;
+            font-weight: 400;
+            color: #273d46;
+            text-align: center;
+            max-width: 735px;
+            margin: 0 auto;
+        }
+    }
+}
+.picture {
+    @include widhei(835px,545px);
+    margin: 0 auto;
+    box-shadow: 0px 15px 65px 0px rgba(15,16,16,0.15);    
+    img{
+        border: 10px solid #FFF;   
+    }
+}
+.content_bottom {
+    .text {
+        padding: 86px 0 0 52px;
+        width: 800px;
+        margin: 0 0 40px 0;
+        font-size: 24px;
+        line-height: 40px;
+        color: #4e5f66;
+        p:nth-child(1){
+            margin: 0 0 40px 0;
+        }
+    }
+    .list {
+        padding: 0 0 0px 35px;
+        li{ 
+            display:block;
+            padding: 0 0px 0 15px;
+            &:nth-child(1){
+                a{
+                    font-family: Arial;
+                    position: relative;
+                    bottom: 3px;
+                    left: 0;
+                    font-size: 20px;
+                    line-height: 36px;
+                    font-weight: 400;
+                    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+                    color: #344851;
+                
+                    &::before{
+                        content: '';
+                        display: inline-block;
+                        width: 25px;
+                        height: 30px;
+                        margin: 0 9px 0 0;
+                        position: relative;
+                        top: 13px;
+                        left: -1px;
+                        background: url(../IMG/check_icon.png) 0 0 no-repeat;
+        
+                    }
+            }
+        }
+        &:nth-child(2){
+            a{
+            position: relative;
+            bottom: 10px;
+            left: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 36px;
+            font-weight: 400;
+            font-style: italic;
+            color: #80b7b3;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 25px;
+                    height: 30px;
+                    margin: 0 9px 0 0;
+                    position: relative;
+                    top: 13px;
+                    left: -2px;
+                    background: url(../IMG/check_icon.png) 0 0 no-repeat;
+
+                }
+            }
+        } 
+        &:nth-child(3){
+            a{
+            position: relative;
+            bottom: 16px;
+            left: -1px;
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 36px;
+            font-weight: 700;
+            color: #273d46;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 25px;
+                    height: 30px;
+                    margin: 0 9px 0 0;
+                    position: relative;
+                    top: 14px;
+                    left: -1px;
+                    background: url(../IMG/check_icon.png) 0 0 no-repeat;
+
+                } 
+            }
+        }
+        &:nth-child(4){
+            a{
+                position: relative;
+                bottom: 21px;
+                left:0;
+                font-family: Arial;
+                font-size: 20px;
+                line-height: 36px;
+                font-weight: 400;
+                text-decoration: line-through;
+                color: #afb5b8;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 25px;
+                    height: 30px;
+                    margin: 0 9px 0 0;
+                    position: relative;
+                    top: 14px;
+                    left: -2px;
+                    background: url(../IMG/check_icon.png) 0 0 no-repeat;
+
+                } 
+            }
+            
+        }                                    
+    }
+}
+.button {
+    padding: 30px 0 0 48px;
+    a{
+        display: inline-block;
+        padding: 2px 0 0 30px;
+        width: 199px;
+        height: 44px;
+        border-radius: 50px;
+        box-shadow: 2px 3px 1px #000;
+        background: #80b7b3;
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 40px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+
+        &::after{
+            content:'';
+            display: inline-block;
+            width: 21px;
+            height: 14px;
+            position: relative;
+            top: 2px;
+            left: 8px;
+            background: url(../IMG/arrow.png) 0 0 no-repeat;
+            }
+        &:hover{
+            background: #5a2327;
+        }
+        &:active{
+            background: #667;
+            position: relative;
+            top: 3px;
+            box-shadow: 0px 0px 0px #000;
+        }
+        }   
+    }
+}
